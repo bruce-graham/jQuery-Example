@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>jQuery Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      $(document).ready(function () {
+
+        var newDiv = $('<div id="container"></div>');
+        var img1 = $('<img id="img1">');
+        var img2 = $('<img id="img2">');
+        var img3 = $('<img id="img3">');
+        var quote1 = $('<p id="quote1"></p>');
+        var quote2 = $('<p id="quote2"></p>');
+        var quote3 = $('<p id="quote3"></p>');
+        var funcX = function () {
+          return Math.random() * window.innerWidth * 0.9;
+        };
+        var funcY = function () {
+          return Math.random() * window.innerHeight * 0.9;
+        };
+
+        $('body').css('background-image', 'url(http://thehigherlearning.com/wp-content/uploads/2014/02/eclipse.jpeg)');
+        img1.attr('src', 'https://49.media.tumblr.com/d9e5b04f6cbc28626578970258702d37/tumblr_nmtlj62jva1u7gnm9o1_400.gif');
+        img2.attr('src', 'http://thirdmonk.net/postcont/2013/10/perfectly-looping-psychedelic-trippy-gifs-LbPQJQU.gif');
+        img3.attr('src', 'http://cdn.lifebuzz.com/images/16931/lifebuzz-b5404d5af1da98a17869519661ea31aa-limit_2000.gif');
+        quote1.text('"Great things are done by a series of small things brought together." ~Vincent Van Gogh');
+        quote2.text('"Always dream and shoot higher than you know you can do. Don\'t bother just to be better than your contemporaries or predecessors. Try to be better than yourself." ~William Faulkner');
+        quote3.text('"Whatever you are, be a good one." ~Abraham Lincoln');
+
+        img1.css({'position': 'fixed', 'left': funcX(), 'top': funcY()});
+        img2.css({'position': 'fixed', 'left': funcX(), 'top': funcY()});
+        img3.css({'position': 'fixed', 'left': funcX(), 'top': funcY()});
+        quote1.css({'position': 'fixed', 'left': funcX(), 'top': funcY(), 'color': 'white'});
+        quote2.css({'position': 'relative', 'left': funcX(), 'top': funcY(), 'color': 'white'});
+        quote3.css({'position': 'relative', 'left': funcX(), 'top': funcY(), 'color': 'white'})
+        img1.width('300px').height('200px');
+        img2.width('300px').height('200px');
+        img3.width('300px').height('200px');
+
+        $('body').prepend(newDiv);
+        $('#container').prepend(img1);
+        $('#container').prepend(img2);
+        $('#container').prepend(img3);
+        $('#container').prepend(quote1);
+        $('#container').prepend(quote2);
+        $('#container').prepend(quote3);
+
+        $('#img1').fadeOut(1000).fadeIn(6000).fadeOut(1000).fadeIn(6000);
+        $('#img2').fadeOut(2000).fadeIn(5000).fadeOut(2000).fadeIn(5000);
+        $('#img3').fadeOut(3000).fadeIn(4000).fadeOut(3000).fadeIn(4000);
+        $('#quote1').fadeOut(4000).fadeIn(3000).fadeOut(4000).fadeIn(3000);
+        $('#quote2').fadeOut(5000).fadeIn(2000).fadeOut(5000).fadeIn(2000);
+        $('#quote3').fadeOut(6000).fadeIn(1000).fadeOut(6000).fadeIn(1000);
+
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
